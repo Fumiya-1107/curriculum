@@ -1,8 +1,8 @@
 <?php
 
-$full_name = $post['full_name'];
-$password = $post['password'];
-$mail_address = $post['mail_address'];
+$full_name = $_POST['full_name'];
+$password = $_POST['password'];
+$mail_address = $_POST['mail_address'];
 
 ?>
 
