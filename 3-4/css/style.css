@@ -1,0 +1,85 @@
+.wrapper {
+	width: 1000px;
+	text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img {
+	float: left;
+	height: 120px;
+	width: 200px;
+	background-color: #add8e6;
+}
+
+.hayata {
+	float: right;
+	height: 60px;
+	width: 800px;
+	background-color: #87ceeb;
+}
+
+.login {
+	float: right;
+	height: 60px;
+	width: 800px;
+	background-color: #00ffff;
+}
+
+.post {
+	float: left;
+	height: 165px;
+	width: 810px;
+	background-color: #e0ffff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.kiji {
+	float: left;
+	height: 25px;
+	width: 55px;
+	background-color: #87ceeb;
+	margin: 1px;
+}
+.title {
+	float: left;
+	height: 25px;
+	width: 200px;
+	background-color: #87ceeb;
+	margin: 1px;
+}
+
+.category {
+	float: left;
+	height: 25px;
+	width: 70px;
+	background-color: #87ceeb;
+	margin: 1px;
+}
+
+.honbun {
+	float: left;
+	height: 25px;
+	width: 295px;
+	background-color: #87ceeb;
+	margin: 1px;
+}
+
+.toukou {
+	float: left;
+	height: 25px;
+	width: 180px;
+	background-color: #87ceeb;
+	margin: 1px;
+}
+
+.hooter {
+	height: 50px;
+	width: 1000px;
+	background-color: #00ced1;
+	clear: both;
+}
