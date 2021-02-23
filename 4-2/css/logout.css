@@ -1,0 +1,78 @@
+.header {
+    height: 52px;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 36px;
+}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.nav-list {
+	list-style: none;
+    display: flex;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-item {
+    padding: 12px 0px;
+    margin-right: 28px;
+}
+
+.nav-item:last-of-type {
+    margin-right: 0;
+}
+
+.nav-item:hover {
+    border-bottom: 1px solid #000;
+} */
+
+body {
+	font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,sans-serif;
+	width: auto;
+	text-align: left;
+}
+
+h2 {
+	margin-left: 33px;
+}
+
+.wrapper {
+	font-size: 17px;
+	width: auto;
+	padding: 25px 0px 0px 30px;
+	border: 1px solid #F4F4F4;
+	background-color: #E0ECFF;
+}
+
+::placeholder {
+	text-align: left;
+	font-size: 17px;
+	width: 400px;
+}
+
+.back {
+	width: 235px;
+	height: 40px;
+	background-color: #009900;
+	font-size: 17px;
+	font-family: sans-serif;
+	color: white;
+	border: 1px solid #009900;
+	border-radius: 3px;
+	margin: 40px 0px 20px auto;
+	box-shadow: 0 12px 10px -6px rgba(0, 0, 0, .3);
+}
