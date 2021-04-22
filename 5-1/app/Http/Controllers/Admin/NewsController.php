@@ -8,6 +8,7 @@ class NewsController extends Controller
 {
   public function add()
   {
+      // admin/newsディレクトリ配下のcreate.blade.phpを呼び出す
       return view('admin.news.create');
   }
 
@@ -18,14 +19,6 @@ class NewsController extends Controller
       $news = new News;
       $form = $request->all();
 
-      // formに画像があれば、保存する
-      // if ($form['image']) {
-      //   $path = $request->file('image')->store('public/image');
-      //   $news->image_path = basename($path);
-      // } else {
-      //     $news->image_path = null;
-      // }
-
       unset($form['_token']);
       unset($form['image']);
       // データベースに保存する
@@ -35,17 +28,8 @@ class NewsController extends Controller
       return redirect('admin/news/create');
   }
 
-    // 以下を追記
   public function index()
   {
-      // $cond_title = $request->cond_title;
-      // if ($cond_title != '') {
-      //     // 検索されたら検索結果を取得する
-      //     $posts = News::where('title', $cond_title)->get();
-      // } else {
-      //     // それ以外はすべてのニュースを取得する
-      //     $posts = News::all();
-      // }
     $posts = News::all();
       return view('admin.news.create', compact('posts'));
   }

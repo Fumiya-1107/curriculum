@@ -2,14 +2,16 @@
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
+        <!-- edgeブラウザに対応 -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 文字や画像の大きさを調整(例：スマートフォンで見たときなど) -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSRF Token -->
-         {{-- 後の章で説明します --}}
+         {{-- 利用者に意図しない通信リクエストを送信させ、利用者の意図しない処理をサービスに実行させることが可能となる脆弱性、その脆弱性を利用した攻撃手法から守る --}}
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        {{-- 各ページごとにtitleタグを入れるために@yieldで空けておきます。 --}}
+        {{-- 指定したセッションの内容を表示 --}}
         <title>@yield('title')</title>
 
         <!-- Scripts -->
@@ -17,21 +19,24 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
+        {{-- Google Fontsのパフォーマンスを最適化 --}}
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        {{-- この章の後半で作成するCSSを読み込みます --}}
+        {{-- CSSの読み込み --}}
         <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="app">
-            {{-- 画面上部に表示するナビゲーションバーです。 --}}
+            {{-- 画面上部ナビゲーションバー --}}
             <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="container">
+                    <!-- {{ url('/') }}：そのままURLを返すメソッド -->
                     <a class="navbar-brand" href="{{ url('/') }}">
+                        <!-- configフォルダのapp.phpの中にあるnameにアクセス -->
                         {{ config('app.name', 'Laravel') }}
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
