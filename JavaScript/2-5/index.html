@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding : 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <select id="selbox" onchange="changeLang()">
+        <option value="select">選択してください</option>
+        <option value="selected_jpn">日本語</option>
+        <option value="selected_en">English</option>
+        <option value="selected_all">全て表示</option>
+    </select>
+    <table>
+        <tr>
+            <th id="japan">日本</th>
+            <td id="hello_jpn">こんにちは</td>
+            <td id="thankyou_jpn">ありがとう</td>
+            <td id="goodbye_jpn">さようなら</td>
+        </tr>
+        <tr>
+            <th id="english">English</th>
+            <td id="hello">Hello</td>
+            <td id="thankyou">Thank you</td>
+            <td id="goodbye">Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        //①onchangeで使用されている関数の中身を実装してください。
+        function changeLang() {
+            if (document.getElementById('selbox')) {
+                selboxValue = document.getElementById('selbox').value;
+                if (selboxValue == "selected_jpn" ) {
+                    // 日本語を表示
+                    document.getElementById('japan').style.display = "";
+                    document.getElementById('hello_jpn').style.display = "";
+                    document.getElementById('thankyou_jpn').style.display = "";
+                    document.getElementById('goodbye_jpn').style.display = "";
+                    // 英語を非表示
+                    document.getElementById('english').style.display = "none";
+                    document.getElementById('hello').style.display = "none";
+                    document.getElementById('thankyou').style.display = "none";
+                    document.getElementById('goodbye').style.display = "none";
+                } else if (selboxValue == "selected_en") {
+                    // 日本語を非表示
+                    document.getElementById('japan').style.display = "none";
+                    document.getElementById('hello_jpn').style.display = "none";
+                    document.getElementById('thankyou_jpn').style.display = "none";
+                    document.getElementById('goodbye_jpn').style.display = "none";
+                    // 英語を表示
+                    document.getElementById('english').style.display = "";
+                    document.getElementById('hello').style.display = "";
+                    document.getElementById('thankyou').style.display = "";
+                    document.getElementById('goodbye').style.display = "";                    
+                } else if (selboxValue = "selected_all") {
+                    // 日本語を表示
+                    document.getElementById('japan').style.display = "";
+                    document.getElementById('hello_jpn').style.display = "";
+                    document.getElementById('thankyou_jpn').style.display = "";
+                    document.getElementById('goodbye_jpn').style.display = "";
+                    // 英語を表示
+                    document.getElementById('english').style.display = "";
+                    document.getElementById('hello').style.display = "";
+                    document.getElementById('thankyou').style.display = "";
+                    document.getElementById('goodbye').style.display = "";  
+                }
+            }
+        }
+    </script>
+</body>
+</html>
