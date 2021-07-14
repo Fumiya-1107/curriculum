@@ -1,0 +1,18 @@
+.container{
+    width: auto;
+    margin: auto;
+  }
+  #app h1{
+    font-size: 20px;
+    /* border-bottom: 1px solid#ddd; */
+    padding: 16px 0;
+  }
+
+  #app ul{
+    padding: 0;
+    list-style: none;
+  }
+
+.done {
+    text-decoration: line-through;
+}
