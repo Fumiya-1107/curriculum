@@ -5,7 +5,7 @@ function createJuice(fruits) {
 	console.log(fruits + 'を受け取りました。ジュースにして返します');
 
     //④受け取った果物にジュースという文字列を結合して、呼び出し元に返す
-	return fruits = 'みかん';
+	return 'みかんジュース';
 }
 //⑤関数の実行：「みかん」を渡して、結果を受け取れるように適当な変数（orangeJuice）を用意
 let orangeJuice = createJuice('みかん');
